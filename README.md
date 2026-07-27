@@ -98,6 +98,35 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 영상 3개와 각 영상 설명
 
+## Custom YOLO11n Target Detector
+
+프로젝트의 분홍색 표적을 실시간으로 검출하기 위해  
+직접 데이터를 수집하고 라벨링하여 단일 클래스 YOLO11n 모델을 학습했습니다.
+
+### Training Pipeline
+
+1. 실제 로봇 운용 환경에서 표적 영상을 촬영
+2. 영상 프레임을 이미지 데이터로 추출
+3. 표적 영역을 `target` 클래스로 직접 라벨링
+4. Train / Validation 데이터셋 분리
+5. YOLO11n 모델을 100 epochs 학습
+6. 검증 성능 확인 후 Jetson Orin Nano의 실시간 검출 노드에 적용
+7. 검출 박스 중심 좌표를 IBVS 제어 입력으로 사용
+
+### Model Performance
+
+| Metric | Validation Result |
+|---|---:|
+| Precision | ≈ 0.99 |
+| Recall | ≈ 0.99 |
+| mAP@0.5 | ≈ 0.99 |
+| mAP@0.5:0.95 | ≈ 0.79 |
+| Training Epochs | 100 |
+| Model | YOLO11n |
+| Classes | 1 (`target`) |
+
+> 위 성능은 프로젝트 실험 환경에서 구성한 validation dataset 기준입니다.
+
 ## My Contribution
 
 본 프로젝트에서 **Leader Waffle의 자동 조준 및 타격 서브시스템 개발과 전체 시스템 통합**을 담당했습니다.

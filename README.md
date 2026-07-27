@@ -100,7 +100,40 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 ## My Contribution
 
-본인이 직접 담당한 구현
+본 프로젝트에서 **Leader Waffle의 자동 조준 및 타격 서브시스템 개발과 전체 시스템 통합**을 담당했습니다.
+
+### OMX Auto-Aim System
+
+* OpenManipulator-X 기반 자동 조준 및 타격 파이프라인 설계
+* 지도상의 위험 좌표를 로봇팔 조준 방향으로 변환하는 Point-at IK 적용
+* YOLO 객체 검출 결과와 영상 중심 오차를 이용한 IBVS 제어 구현
+* 표적 중심 정렬을 위한 Pan/Tilt PD 제어 및 Deadband 튜닝
+* `AIMING → SCANNING → TRACKING → CONFIRMING → FIRING` 상태 머신 구현
+* 조준 안정성 유지 시간과 Cooldown을 포함한 안전 타격 조건 설계
+
+### ROS 2 Integration
+
+* Scout가 생성한 지도와 위험 좌표를 Leader Waffle의 이동 및 조준 시스템과 연동
+* Nav2 이동 명령과 OMX 조준 동작을 비동기 상태 머신으로 연결
+* 긴급 TARGET 입력 시 진행 중인 순찰 작업을 중단하는 우선순위 큐 및 선점 처리
+* 조준 가능한 위치가 아닐 경우 주변 후보 위치를 평가하여 재이동하는 View Pose 로직 적용
+* ROS 2 토픽과 노드 간 인터페이스 설계 및 실제 로봇 통합 테스트
+
+### Embedded and Hardware Integration
+
+* Jetson Orin Nano에서 ROS 2, YOLO 및 OpenManipulator-X 구동 환경 구성
+* GPIO 기반 타격 장치 제어 및 발사 펄스 출력 구현
+* 부팅·종료 시 출력 LOW 유지, 타격 비활성화 및 Cooldown 안전 기능 적용
+* 실물 로봇의 모터 방향, 관절 한계, 조준 오차 및 제어 파라미터 조정
+
+### Monitoring and Demonstration
+
+* YOLO 카메라 영상과 조준 상태를 확인하기 위한 Flask 기반 디버그 스트리밍 연동
+* 통합 대시보드에서 로봇 상태, 실시간 지도, 경로 및 객체 검출 결과 검증
+* 실물 로봇과 대시보드 영상을 동기화하여 전체 탐색·이동·조준·타격 과정 기록
+
+> 전체 다중 로봇 시스템은 팀원들과 공동으로 개발했으며,
+> 본 저장소에서는 제가 담당한 OMX 자동 조준·타격 및 Leader 연동 부분을 중심으로 정리했습니다.
 
 ## Tech Stack
 

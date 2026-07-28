@@ -29,7 +29,7 @@
 
 <br>
 
-[▶ 전체 시스템 데모 영상 보기](https://youtu.be/VIDEO_ID_FULL_SYSTEM)
+[▶ 전체 시스템 데모 영상 보기](https://youtu.be/gJrPbyOyMIo?si=wJMBEp_GhF82pnUG)
 
 </div>
 
@@ -162,7 +162,7 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 <div align="center">
 
-[![Full System Demo](docs/media/full_system_thumbnail.jpg)](https://youtu.be/VIDEO_ID_FULL_SYSTEM)
+[![Full System Demo](docs/media/full_system_thumbnail.jpg)](https://youtu.be/gJrPbyOyMIo?si=wJMBEp_GhF82pnUG)
 
 </div>
 
@@ -175,7 +175,7 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 <div align="center">
 
-[![IBVS Demo](docs/media/ibvs_thumbnail.jpg)](https://youtu.be/VIDEO_ID_IBVS)
+[![IBVS Demo](docs/media/ibvs_thumbnail.jpg)](https://youtu.be/t03m8PHifMo?si=kqOEwDX6STCyj-Lc)
 
 </div>
 
@@ -188,7 +188,7 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 <div align="center">
 
-[![Additional Demo](docs/media/demo3_thumbnail.jpg)](https://youtu.be/VIDEO_ID_DEMO_3)
+[![Additional Demo](docs/media/demo3_thumbnail.jpg)](https://youtu.be/vuF_W8wdSJ0?si=lV1SKcmuB-jaH3uk)
 
 </div>
 

@@ -22,14 +22,13 @@
 
 <div align="center">
 
-<!-- docs/media/system_demo.gif 파일을 업로드한 뒤 사용 -->
 <img src="docs/media/system_demo.gif"
      alt="Multi-robot autonomous exploration and response demo"
      width="900">
 
 <br>
 
-[▶ 전체 시스템 데모 영상 보기](https://youtu.be/gJrPbyOyMIo?si=wJMBEp_GhF82pnUG)
+[▶ 전체 시스템 데모 영상 보기](https://youtu.be/gJrPbyOyMIo)
 
 </div>
 
@@ -162,7 +161,7 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 <div align="center">
 
-[![Full System Demo](docs/media/full_system_thumbnail.jpg)](https://youtu.be/gJrPbyOyMIo?si=wJMBEp_GhF82pnUG)
+[![Full System Demo](docs/media/full_system_thumbnail.jpg)](https://youtu.be/gJrPbyOyMIo)
 
 </div>
 
@@ -175,7 +174,7 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 
 <div align="center">
 
-[![IBVS Demo](docs/media/ibvs_thumbnail.jpg)](https://youtu.be/t03m8PHifMo?si=kqOEwDX6STCyj-Lc)
+[![IBVS Demo](docs/media/ibvs_thumbnail.jpg)](https://youtu.be/t03m8PHifMo)
 
 </div>
 
@@ -184,18 +183,18 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 - 표적이 Deadband 내부에서 안정적으로 유지되면 타격
 - 타격 후 Home 자세로 복귀
 
-### 3. Additional System Demo
+### 3. SAC-Based Exploration in a Narrow Environment
 
 <div align="center">
 
-[![Additional Demo](docs/media/demo3_thumbnail.jpg)](https://youtu.be/vuF_W8wdSJ0?si=lV1SKcmuB-jaH3uk)
+[![Narrow Environment Demo](docs/media/demo3_thumbnail.jpg)](https://youtu.be/vuF_W8wdSJ0)
 
 </div>
 
-<!-- 세 번째 영상의 실제 내용에 맞게 아래 설명을 수정 -->
-- 세 번째 데모의 핵심 시나리오
-- 검증하려는 시스템 기능
-- 영상에서 확인할 수 있는 결과
+- 좁은 통로와 장애물이 가까운 환경에서 SAC 기반 자율 탐색
+- LiDAR 정보를 이용한 충돌 회피 및 방향 전환
+- Cartographer SLAM을 통한 실시간 지도 생성
+- 실물 TurtleBot3에서 강화학습 정책의 주행 안정성 검증
 
 ---
 

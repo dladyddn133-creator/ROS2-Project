@@ -16,6 +16,15 @@
 
 </div>
 
+> [!NOTE]
+> **팀 프로젝트** — 원 프로젝트명: **CQB 전술 탐색·타격 로봇 시스템** (팀 탱크보이)
+>
+> 이 저장소는 [sangaje/ROS2-Project](https://github.com/sangaje/ROS2-Project)의 fork이며,
+> 팀원과 공동 개발한 통합 워크스페이스입니다.
+> 제가 담당한 영역은 [My Contribution](#my-contribution)을 참고하세요.
+>
+> 담당 서브시스템 상세 저장소: **[omx_aim](https://github.com/dladyddn133-creator/omx_aim)**
+
 ---
 
 ## Demo
@@ -106,19 +115,19 @@ Active Scout에 장애가 발생하면 대기 중인 Follower Scout가 마지막
 ## Key Features
 
 ### SAC-Based Autonomous Exploration
-
+> *팀원 담당 영역*
 - 학습된 SAC 정책을 이용해 TurtleBot3의 선속도와 각속도 생성
 - 실물 로봇 환경에서 강화학습 정책 추론 수행
 - SLAM 지도와 탐색 우선도 정보를 정책 입력으로 활용
 
 ### Real-Time SLAM and Bayesian Risk Map
-
+> *팀원 담당 영역*
 - Cartographer 기반 실시간 지도 생성
 - 객체 검출 결과와 로봇 위치를 지도 좌표계로 변환
 - 표적 검출 정보와 위험도를 Risk Map에 누적
 
 ### Multi-Robot Failover
-
+> *팀원 담당 영역*
 - Active Scout의 상태와 heartbeat 감시
 - Scout 장애 발생 시 Follower가 마지막 위치로 이동
 - 역할 전환 후 SLAM·Risk Map·탐색 임무 인계
@@ -275,7 +284,9 @@ Safety Confirmation and Firing
 
 ## My Contribution
 
-본 프로젝트에서 **Leader Waffle의 자동 조준 및 타격 서브시스템, 프로젝트 전용 YOLO11n 표적 검출 모델 개발, 그리고 전체 다중 로봇 시스템 통합**을 담당했습니다.
+전체 시스템 중 **Leader Waffle의 표적 인식·자동 조준·타격 파이프라인과
+정찰 로봇 연동 계층**을 담당했습니다.
+정찰 로봇의 SAC 탐색 정책, Cartographer SLAM, Bayesian Risk Map은 팀원이 담당했습니다.
 
 ### Vision AI and Target Detection
 
